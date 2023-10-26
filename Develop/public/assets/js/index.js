@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
-  if (window.location.pathname === '/miniature-eureka/index.html') {
+  if (window.location.pathname === '/miniature-eureka/.html') {
     saveNoteBtn.addEventListener('click', handleNoteSave);
     newNoteBtn.addEventListener('click', handleNewNoteView);
     clearBtn.addEventListener('click', renderActiveNote);
