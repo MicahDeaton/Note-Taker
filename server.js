@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/notes', (req, res) => {
-    res.sendFile(__dirname + '/public/notes.html');
+    res.sendFile(__dirname + '/notes.html');
   });  
 
 app.listen(PORT, () => {
