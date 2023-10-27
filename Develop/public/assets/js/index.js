@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
-  if (window.location.pathname === '/miniature-eureka/index.html') {
+  if (window.location.pathname === '/index.html') {
     noteForm = document.querySelector('.note-form');
     noteTitle = document.querySelector('.note-title');
     noteText = document.querySelector('.note-textarea');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeNote = {};
 
   const getNotes = () =>
-    fetch('/miniature-eureka/index.html', {
+    fetch('/index.html', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
-  if (window.location.pathname === '/miniature-eureka/.html') {
+  if (window.location.pathname === '/.html') {
     saveNoteBtn.addEventListener('click', handleNoteSave);
     newNoteBtn.addEventListener('click', handleNewNoteView);
     clearBtn.addEventListener('click', renderActiveNote);
