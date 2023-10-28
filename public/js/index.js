@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
-  if (window.location.pathname === '/index.html') {
+  if (window.location.pathname === '/index.html' || window.location.pathname === '/Note-Taker/') {
     noteForm = document.querySelector('.note-form');
     noteTitle = document.querySelector('.note-title');
     noteText = document.querySelector('.note-textarea');
@@ -171,9 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
-  alert(window.location.pathname);
-
-  if (window.location.pathname === '/index.html') {
+  if (window.location.pathname === '/index.html' || window.location.pathname === '/Note-Taker/') {
     saveNoteBtn.addEventListener('click', handleNoteSave);
     newNoteBtn.addEventListener('click', handleNewNoteView);
     clearBtn.addEventListener('click', renderActiveNote);
