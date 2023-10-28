@@ -165,13 +165,15 @@ document.addEventListener('DOMContentLoaded', () => {
       noteListItems.push(li);
     });
   
-    noteListItems.forEach((note) => noteList.appendChild(note)); // Corrected line
+    noteListItems.forEach((note) => noteList.appendChild(note));
   };
   
 
   const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
-  if (window.location.pathname === '/.html') {
+  alert(window.location.pathname);
+
+  if (window.location.pathname === '/index.html') {
     saveNoteBtn.addEventListener('click', handleNoteSave);
     newNoteBtn.addEventListener('click', handleNewNoteView);
     clearBtn.addEventListener('click', renderActiveNote);
