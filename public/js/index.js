@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
-  if (window.location.pathname === '/index.html' || window.location.pathname === '/Note-Taker/') {
+  // if (window.location.pathname === '/index.html' || window.location.pathname === '/Note-Taker/') {
     noteForm = document.querySelector('.note-form');
     noteTitle = document.querySelector('.note-title');
     noteText = document.querySelector('.note-textarea');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     newNoteBtn = document.querySelector('.new-note');
     clearBtn = document.querySelector('.clear-btn');
     noteList = document.querySelector('#notes-list');
-  }
+  //}
 
   const show = (elem) => {
     elem.style.display = 'inline';
@@ -171,12 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
-  if (window.location.pathname === '/index.html' || window.location.pathname === '/Note-Taker/') {
+  // if (window.location.pathname === '/index.html' || window.location.pathname === '/Note-Taker/') {
     saveNoteBtn.addEventListener('click', handleNoteSave);
     newNoteBtn.addEventListener('click', handleNewNoteView);
     clearBtn.addEventListener('click', renderActiveNote);
     noteForm.addEventListener('input', handleRenderBtns);
-  }
+  //}
 
   getAndRenderNotes();
 });
